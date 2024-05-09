@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Image from 'next/image'
+import logo from '../../../public/snapdeal.png'
 function signup() {
   return (
     <div>
@@ -9,11 +10,13 @@ function signup() {
           href="/"
           className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         >
-          <img
-            className="w-8 h-8 mr-2 mt-3 rounded-full "
-            src="https://upload.wikimedia.org/wikipedia/en/3/35/Snapdeal_Logo_new.png"
-            alt="logo"
-          />
+                    <Image
+                    className='rounded-full mt-2 mx-2'
+      src={logo}
+      alt="logo"
+      width={30}
+      height={30}
+    />
           <p className="mt-3">Snapdeal </p>
         </a>
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
