@@ -1,143 +1,127 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '../../../public/snapdeal.png'
+import { FaRegEnvelope } from "react-icons/fa";
+import { MdLockOutline } from "react-icons/md";
+
+
 function signup() {
   return (
-    <div>
-    <section className="bg-gray-50 dark:bg-gray-900">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto  lg:py-0">
-        <a
-          href="/"
-          className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
-        >
-                    <Image
-                    className='rounded-full mt-2 mx-2'
-      src={logo}
-      alt="logo"
-      width={30}
-      height={30}
-    />
-          <p className="mt-3">Snapdeal </p>
-        </a>
-        <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Create and account
-            </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
-              
-              <div>
-                <label
-                  for="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="abc123@gmail.com"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="confirm-password"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Confirm password
-                </label>
-                <input
-                  type="confirm-password"
-                  name="confirm-password"
-                  id="confirm-password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  required=""
-                />
-              </div>
-              <div className="flex items-start">
-                <div className="flex items-center h-5">
-                  <input
-                    id="terms"
-                    aria-describedby="terms"
-                    type="checkbox"
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                    required=""
-                  />
-                </div>
-                <div className="ml-3 text-sm">
-                  <label
-                    for="terms"
-                    className="font-light text-gray-500 dark:text-gray-300"
+    <div className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-200">
+      <div className="flex flex-col justify-center items-center w-full flex-1 px-20 text-center">
+        <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
+          <div className="w-3/5 p-5">
+            <div className="flex text-left font-bold">
+              <Image
+                src={logo}
+                className=" rounded-full"
+                alt="logo"
+                width={29}
+                height={26}
+              />
+              <h2 className="text-[#fc0341] text-xl mx-2">Snapdeal</h2>
+            </div>
+            <div className="py-10 flex flex-col items-center">
+              <h2 className="text-3xl font-bold text-green-500 inline-block mb-2">
+                Sign up to Account
+              </h2>
+              <div className="border-2 w-12 border-green-500 mb-2"></div>
+              <div className="flex justify-center my-2 border shadow-lg rounded p-2 cursor-pointer">
+                <button className="mx-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="31"
+                    height="31"
+                    viewBox="0 0 48 48"
                   >
-                    I accept the{" "}
-                    <a
-                      className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                      href="/"
-                    >
-                      Terms and Conditions
-                    </a>
-                  </label>
+                    <path
+                      fill="#FFC107"
+                      d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                    <path
+                      fill="#FF3D00"
+                      d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"
+                    ></path>
+                    <path
+                      fill="#4CAF50"
+                      d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"
+                    ></path>
+                    <path
+                      fill="#1976D2"
+                      d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
+                    ></path>
+                  </svg>
+                </button>
+                <p className="font-semibold mt-1">Sign up with google</p>
+              </div>
+              <div>
+                <p className="text-gray-500 my-2">or use your email account</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="bg-gray-100 w-64 p-2 flex items-center">
+                  <FaRegEnvelope className="text-gray-400  mr-2" />
+                  <input
+                    type="email"
+                    name=""
+                    id=""
+                    placeholder="Email"
+                    className="bg-gray-100 outline-none text-sm flex-1"
+                  />
                 </div>
               </div>
-             <div>
-             <button
-                type="submit"
-                className="w-full text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-              >
-                Create an account
-              </button>
-              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Already have an account?{" "}
-                <a
-                  href="/"
-                  className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                >
-                  Login here
-                </a>
-              </p>
-             </div>
 
-              <div class="inline-flex items-center justify-center w-full">
-                <hr class="w-64 h-1 bg-gray-200 border-0 rounded dark:bg-gray-700" />
-                
-              </div>
-              <div class="flex items-center justify-center dark:bg-gray-800">
-                <button class="px-4 py-2 border w-full flex justify-center gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:shadow transition duration-150">
-                  <img
-                    class="w-6 h-6"
-                    src="https://www.svgrepo.com/show/475656/google-color.svg"
-                    loading="lazy"
-                    alt="google logo"
+              <div className="flex flex-col items-center mt-3">
+                <div className="bg-gray-100 w-64 p-2 flex items-center">
+                  <MdLockOutline className="text-gray-400  mr-2" />
+                  <input
+                    type="password"
+                    name=""
+                    id=""
+                    placeholder="Password"
+                    className="bg-gray-100 outline-none text-sm flex-1"
                   />
-                  <span>Sign Up with Google</span>
-                </button>
+                </div>
+                <div className="bg-gray-100 w-64 p-2 flex mt-3 items-center">
+                  <MdLockOutline className="text-gray-400  mr-2" />
+                  <input
+                    type="confirm_password"
+                    name=""
+                    id=""
+                    placeholder="Confirm Password"
+                    className="bg-gray-100 outline-none text-sm flex-1"
+                  />
+                </div>
+
+
+                <a
+                  href=""
+                  className="border-2 mt-5 border-green-500 text-green-500 rounded-full px-12 py-2 inline-block font-semibold hover:bg-green-500 hover:text-white"
+                >
+                  Sign Up
+                </a>
               </div>
-            </form>
+            </div>
+          </div>
+
+          <div className="w-2/5 bg-green-500 text-white rounded-r-2xl py-36 px-12">
+            <h2 className="text-3xl font-bold mb-2">Hello,Friend!</h2>
+            <div className="border-2 w-10 border-white inline-block mb-2"></div>
+            <p className="mb-2">
+              {" "}
+              Fill up personal information and start journey with us.
+            </p>
+            <a
+              href="/"
+              className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-green-500"
+            >
+              Sign In
+            </a>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
   )
 }
 
