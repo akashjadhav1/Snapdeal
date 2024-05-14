@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import data from '@/assets/data.json';
-import { Card, CardBody, Image, Button } from "@nextui-org/react";
+import ProductList from "../productList/ProductList"; 
 
 export default function LandingPage() {
     // Get the first 100 items from the data array
@@ -28,7 +28,7 @@ export default function LandingPage() {
 
     return (
         <div className="flex">
-            <div className="w-1/5 shadow-gray-900 shadow-2xl bg-gray-800 sticky top-0 h-screen overflow-y-auto">
+            <div className="w-[15%] shadow-gray-900 shadow-2xl bg-gray-800 sticky top-0 h-screen overflow-y-auto">
                 <div className="p-5">
                     <h1 className="text-white font-bold text-lg">Top Categories</h1>
                 </div>
@@ -41,28 +41,18 @@ export default function LandingPage() {
                     </ul>
                 </nav>
             </div>
-            <div className="w-4/5 gap-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 m-4">
+
+            <div className="w-[85%] grid gap-8 grid-cols-4 p-8 "> {/* Grid with 4 columns and gap */}
                 {filteredData.map((item, index) => (
-                    <Card shadow width="220px" key={index} className="dark m-4">
-                        <div className="flex justify-center  items-center h-50 p-3">
-                            <Image
-                                src={item.image}
-                                size="auto"
-                                style={{ objectFit: 'fit', maxWidth: '100%', maxHeight: '50%' }}
-                            />
-                        </div>
-                        <CardBody>
-                            <div className="text-center font-bold mt-2">
-                                <h5 className="truncate">{item.title}</h5>
-                                <p>RS. <span>{item.price}</span></p>
-                            </div>
-                            <div className="mt-4">
-                                <Button color="primary" size="full"> ADD TO CART</Button>
-                            </div>
-                        </CardBody>
-                    </Card>
+                    <ProductList
+                        key={index}
+                        id={item.id}
+                        imageUrl={item.image}
+                        title={item.title}
+                        price={item.price}
+                    />
                 ))}
             </div>
-        </div>
+        </div> 
     );
 }

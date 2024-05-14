@@ -51,7 +51,7 @@ export default function NavbarComponent() {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent as="div" className="items-center" justify="end">
+      <NavbarContent as="div" className="dark items-center" justify="end">
         <AvatarDropdown />
       </NavbarContent>
     </Navbar>
