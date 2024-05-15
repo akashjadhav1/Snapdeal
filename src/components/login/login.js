@@ -1,11 +1,22 @@
+import react from 'react'
 import { Input, Button } from "@nextui-org/react";
 import Image from "next/image";
 import GoogleLogo from "@/assets/googleLogo.svg";
+import {useState} from 'react'
 
 const LoginPage = () => {
+const [userData,setUserData] = useState('')
+
+const handleInputChange = (e) =>{
+  setUserData(e.target.value)
+}
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your login logic here
+    console.log(userData)
   };
 
   return (

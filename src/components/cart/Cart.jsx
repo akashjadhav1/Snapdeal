@@ -69,31 +69,13 @@ const Cart = () => {
       </div>
       <hr className="mt-10" />
 
-      <div className="mt-4">
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <div className="flex w-full flex-wrap items-end md:flex-nowrap mb-6 md:mb-0 gap-4">
-              <Input
-                key="outside"
-                className="dark"
-                type="text"
-                label="Coupon Code"
-                labelPlacement="outside"
-                placeholder="Enter coupon code"
-              />
-              <Button radius="lg" className="">
-                Apply
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
 
     <div className="mt-5">
       <div className="flex justify-between mt-2">
         <p>Subtotal</p>
-        <p>$$159.96</p>
+        <p>$159.96</p>
       </div>
       <div className="flex justify-between mt-2">
       <p>Delivery</p>
@@ -115,7 +97,7 @@ const Cart = () => {
     </div>
 
 
-    <div className="mt-4">
+    <div className="mt-6 flex justify-end">
     <Button color="primary" size="lg" variant="bordered">
         Continue to Shipping
       </Button>  

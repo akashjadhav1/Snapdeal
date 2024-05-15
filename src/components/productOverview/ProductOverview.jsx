@@ -45,10 +45,7 @@ function ProductOverview() {
             <p className="border-1 border-white w-10 h-10 bg-gray-900 rounded-full mx-1"></p>
           </div>
 
-          <div className="flex mt-4">
-            <Image src={Shipping} alt="Shipping" width={40} height={40} className="text-white"/>
-            <p className="mx-2 mt-2">Free Shipping and 30 days return </p>
-          </div>
+          
 
           <div className="mt-5 flex">
             <Button color="secondary" size="lg" fullWidth="true" className="flex">

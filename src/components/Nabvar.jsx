@@ -15,7 +15,7 @@ import AvatarDropdown from "./AvatarDropdown";
 
 export default function NavbarComponent() {
   return (
-    <Navbar className="bg-[#E40046]">
+    <Navbar className="dark bg-[#E40046]">
       <NavbarBrand className="min-w-36 max-w-36">
         <Link href="/">
           <Image src={Logo} alt="Snapdeal" />
@@ -51,8 +51,8 @@ export default function NavbarComponent() {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent as="div" className="dark items-center" justify="end">
-        <AvatarDropdown />
+      <NavbarContent as="div" className="flex items-center justify-end">
+        <AvatarDropdown className="dark mr-4" />
       </NavbarContent>
     </Navbar>
   );

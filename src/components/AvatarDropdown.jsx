@@ -13,7 +13,7 @@ export default function AvatarDropdown() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Dropdown isOpen={isOpen} placement="bottom-end">
+    <Dropdown className="dark" isOpen={isOpen} placement="bottom-end">
       <DropdownTrigger
         onMouseEnter={() => {
           setIsOpen(true);
