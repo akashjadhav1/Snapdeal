@@ -10,7 +10,7 @@ export default function ProductCard({
   handleShortlistToggle,
 }) {
   const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
-  const shortlist = useSelector((state) => state.userData.shortlist);
+  const shortlist = useSelector((state) => state.userData.shortlist) || [];
   const isShortlisted = isAuthenticated && shortlist.includes(product.id);
 
   const handleCardClick = () => handleClick(product.id);
@@ -24,14 +24,14 @@ export default function ProductCard({
       className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden cursor-pointer"
       onClick={handleCardClick}
     >
-      <div className="relative overflow-hidden h-64">
+      <div className="relative overflow-hidden h-64 w-full">
         <Image
           src={product.image}
           alt={product.title}
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
           objectPosition="center"
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 p-2"
         />
         <div
           className="absolute top-2 right-2 cursor-pointer text-2xl"

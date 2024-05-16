@@ -10,7 +10,7 @@ export default function CategoryMenu() {
 
   if (isLoading)
     return (
-      <div className="w-64 p-4 m-8 mb-auto bg-white shadow-xl rounded">
+      <div className="w-64  p-4 m-8 mb-auto bg-white shadow-xl rounded">
         <span className="text-xs mb-2 p-2">TOP CATEGORIES</span>
         {new Array(8).fill().map((_, index) => (
           <div key={index} className="p-2">
@@ -27,8 +27,8 @@ export default function CategoryMenu() {
     );
 
   return (
-    <div className="hidden md:flex flex-col w-64 p-4 m-8 mb-auto bg-white shadow-xl rounded">
-      <span className="text-xs mb-2 p-2">TOP CATEGORIES</span>
+    <div className="hidden h-screen md:flex flex-col w-64 p-4 mx-8 mb-auto bg-white shadow-xl rounded sticky top-[70px]">
+      <span className="text-xs mb-2 p-2 pt-12 font-bold">TOP CATEGORIES</span>
       {categories.map((category, index) => (
         <div key={index} className="text-sm p-2 hover:bg-gray-200">
           <Link href={`/products/${category.slug}`} className="h-6">
