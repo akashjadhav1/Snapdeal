@@ -3,6 +3,7 @@ import Image from "next/image";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { renderStars } from "@/utils/renderStars";
 import { useSelector } from "react-redux";
+import Link from "next/link";
 
 export default function ProductCard({
   product,
@@ -43,12 +44,14 @@ export default function ProductCard({
             <GoHeart className="text-gray-500" />
           )}
         </div>
+        <Link href={`/productOverview/${product.id}`}>
         <div className="absolute bottom-0 left-0 w-full py-2 bg-blue-500 text-white text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-          View Product
+         View Product
         </div>
+        </Link> 
       </div>
       <div className="p-4">
-        <h3 className="text-md text-black truncate ml-1">{product.title}</h3>
+        <h3 className="text-md text-black truncate ml-1 font-bold text-xl">{product.title}</h3>
         <div className="flex text-[gold] text-xs">
           {renderStars(Math.round(product.rating.rate))}
         </div>

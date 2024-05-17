@@ -28,7 +28,7 @@ export default function CategoryMenu() {
 
   return (
     <div className="hidden h-screen md:flex flex-col w-64 p-4 mx-8 mb-auto bg-white shadow-xl rounded sticky top-[70px]">
-      <span className="text-xs mb-2 p-2 pt-12 font-bold">TOP CATEGORIES</span>
+      <span className="text-lg mb-2 p-2 pt-12 font-bold">TOP CATEGORIES</span>
       {categories.map((category, index) => (
         <div key={index} className="text-sm p-2 hover:bg-gray-200">
           <Link href={`/products/${category.slug}`} className="h-6">
