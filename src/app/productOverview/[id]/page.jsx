@@ -40,8 +40,8 @@ function ProductOverview() {
           <h2 className="text-3xl font-bold">
             {filteredProduct.title}
           </h2>
-          <div className="flex items-center  text-[gold] text-lg mt-4">
-           Rating  <span className="flex mx-4">{renderStars(Math.round(filteredProduct.rating.rate))}</span>
+          <div className="flex items-center font-bold  text-lg mt-4">
+           Rating  <span className="flex mx-4 text-[gold]">{renderStars(Math.round(filteredProduct.rating.rate))}</span>
         </div>
 
           <div className="mt-2">

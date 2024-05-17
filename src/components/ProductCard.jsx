@@ -26,7 +26,8 @@ export default function ProductCard({
       onClick={handleCardClick}
     >
       <div className="relative overflow-hidden h-64 w-full">
-        <Image
+      <Link href={`/productOverview/${product.id}`}>
+      <Image
           src={product.image}
           alt={product.title}
           layout="fill"
@@ -34,6 +35,8 @@ export default function ProductCard({
           objectPosition="center"
           className="absolute inset-0 p-2"
         />
+      </Link>
+       
         <div
           className="absolute top-2 right-2 cursor-pointer text-2xl"
           onClick={handleHeartClick}
