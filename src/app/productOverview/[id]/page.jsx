@@ -31,10 +31,10 @@ function ProductOverview() {
 
   // Render the product details only if the id matches
   return (
-    <div className="h-screen mx-auto px-8 py-8 border shadow-xl mt-5 bg-gray-900 text-white">
-      <div className="flex">
-        <div className="flex items-center justify-center w-[50%] border rounded-xl p-5">
-          <Image src={bellSvg} height={500} width={500} alt="image" />
+    <div className="light h-screen mx-auto px-8 py-8 border shadow-lg mt-5 ">
+      <div className="flex  ">
+        <div className="flex items-center justify-center w-[50%] border rounded-xl p-5 bg-gray-200">
+          <Image className="bg-gray-200" src={filteredProduct.image} height={500} width={500} alt="image" />
         </div>
         <div className="p-8 w-[50%]">
           <h2 className="text-3xl font-bold">
@@ -55,7 +55,7 @@ function ProductOverview() {
           </div>
           <div className="flex mt-5 p-1">
             <p className="border-1 border-white w-10 h-10 bg-gray-400 rounded-full mx-1"></p>
-            <p className="border-1 border-white w-10 h-10 bg-gray-100 rounded-full mx-1"></p>
+            <p className="border-1 border-white w-10 h-10 bg-gray-300 rounded-full mx-1"></p>
             <p className="border-1 border-white w-10 h-10 bg-gray-900 rounded-full mx-1"></p>
           </div>
 
