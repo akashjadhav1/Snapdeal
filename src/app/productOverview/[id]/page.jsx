@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import bellSvg from "@/assets/bell.svg";
@@ -31,26 +31,35 @@ function ProductOverview() {
 
   // Render the product details only if the id matches
   return (
-    <div className="light h-screen mx-auto px-8 py-8 border shadow-lg mt-5 ">
-      <div className="flex  ">
+    <div className="light h-screen mx-auto px-8 py-8 border shadow-lg mt-5">
+      <div className="flex">
         <div className="flex items-center justify-center w-[50%] border rounded-xl p-5 bg-gray-200">
-          <Image className="bg-gray-200" src={filteredProduct.image} height={500} width={500} alt="image" />
+          <div className="relative w-[600px] h-[600px]">
+            <Image
+              className="bg-gray-200 object-cover"
+              src={filteredProduct.image}
+              layout="fill"
+              objectFit="contain"
+              alt="image"
+            />
+          </div>
         </div>
         <div className="p-8 w-[50%]">
           <h2 className="text-3xl font-bold">
             {filteredProduct.title}
           </h2>
-          <div className="flex items-center font-bold  text-lg mt-4">
-           Rating  <span className="flex mx-4 text-[gold]">{renderStars(Math.round(filteredProduct.rating.rate))}</span>
-        </div>
-
+          <div className="flex items-center font-bold text-lg mt-4">
+            Rating
+            <span className="flex mx-4 text-[gold]">
+              {renderStars(Math.round(filteredProduct.rating.rate))}
+            </span>
+          </div>
           <div className="mt-2">
             <h1 className="font-bold text-xl">RS.{filteredProduct.price}</h1>
           </div>
-
           <div className="mt-5 w-3/4">
             <p>
-             {filteredProduct.description}
+              {filteredProduct.description}
             </p>
           </div>
           <div className="flex mt-5 p-1">
@@ -58,17 +67,14 @@ function ProductOverview() {
             <p className="border-1 border-white w-10 h-10 bg-gray-300 rounded-full mx-1"></p>
             <p className="border-1 border-white w-10 h-10 bg-gray-900 rounded-full mx-1"></p>
           </div>
-
-          
-
           <div className="mt-5 flex">
-            <Button color="secondary" size="lg" fullWidth="true" className="flex">
-              <Image src={addToCart} alt="cart" className=""/>
+            <Button color="primary" size="lg" fullWidth={true} className="flex">
+              <Image src={addToCart} alt="cart" className="" />
               ADD TO CART
             </Button>
             <Button isIconOnly color="danger" aria-label="Like" className="mx-2 mt-1.5">
-                <HeartIcon />
-              </Button>{" "}
+              <HeartIcon />
+            </Button>
           </div>
         </div>
       </div>
